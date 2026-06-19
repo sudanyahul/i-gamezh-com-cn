@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sudanyahul.github.io/i-gamezh-com-cn/sitemap.xml

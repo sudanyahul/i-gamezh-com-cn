@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 稳定入口与使用说明</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f9f6f2;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      color: #2b2b2b;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fefcf9;
+      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .page { padding: 1.8rem 1.2rem; }
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      border-left: 6px solid #d4a373;
+      padding-left: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 2.2rem 0 1rem;
+      color: #4d3e2e;
+      border-bottom: 1px solid #e5d9cc;
+      padding-bottom: 0.4rem;
+    }
+    p {
+      margin: 0.8rem 0;
+      text-align: justify;
+    }
+    .subtitle {
+      color: #6f5e4a;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    .hero-box {
+      background: #f3efe8;
+      padding: 2rem 2rem 1.5rem;
+      border-radius: 16px;
+      margin: 1.5rem 0 2rem;
+      position: relative;
+    }
+    .hero-box::before {
+      content: "📌";
+      position: absolute;
+      top: -0.8rem;
+      left: 1.5rem;
+      font-size: 1.6rem;
+    }
+    .hero-box p {
+      margin: 0.7rem 0;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+    .card {
+      flex: 1 1 180px;
+      background: #fdfaf7;
+      border: 1px solid #e4dbd0;
+      border-radius: 14px;
+      padding: 1.6rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .card h3 {
+      font-weight: 500;
+      color: #5b4c39;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      margin: 0.3rem 0;
+    }
+    .quote-block {
+      background: #f4efe7;
+      border-left: 4px solid #b89b7a;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+    }
+    .faq-item {
+      margin: 1.2rem 0;
+      padding-left: 0.5rem;
+    }
+    .faq-q {
+      font-weight: 500;
+      color: #4d3e2e;
+    }
+    .faq-a {
+      margin-top: 0.2rem;
+      padding-left: 1.2rem;
+      color: #3a3229;
+    }
+    .footer-links {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #ded5c9;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      font-size: 0.95rem;
+    }
+    .footer-links a {
+      color: #7f6b55;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8a692;
+    }
+    .footer-links a:hover {
+      color: #3f3226;
+      border-bottom: 1px solid #3f3226;
+    }
+    .inline-link {
+      color: #6f5840;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #cbb7a0;
+      font-weight: 400;
+    }
+    .inline-link:hover {
+      color: #3f2a1a;
+      text-decoration-color: #3f2a1a;
+    }
+    .remark {
+      background: #f8f4ef;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+    }
+    .btn-soft {
+      display: inline-block;
+      background: #d4c4b2;
+      color: #2b231c;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .btn-soft:hover {
+      background: #c1ad96;
+      border-color: #a4876b;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e5d9cc;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 区域 -->
+  <h1>爱游戏</h1>
+  <p class="subtitle">稳定入口 · 页面说明 · 使用笔记</p>
+
+  <div class="hero-box">
+    <p><strong>关于入口的稳定性</strong> —— 对于经常需要查阅游戏资讯、社区动态或工具页面的用户来说，一个固定可用的地址是基础。</p>
+    <p><a href="https://i-gamezh.com.cn" class="inline-link">爱游戏</a> 作为长期维护的平台，页面结构清晰，适合作为日常参考的起点。下方归纳了核心用途与常见问题的摘要，帮助新访客快速熟悉。</p>
+    <p style="margin-top: 0.8rem;"><span class="btn-soft">页面引导 ▸</span></p>
+  </div>
+
+  <!-- 优势区：卡片式 -->
+  <h2>为什么可以把它当作稳定入口</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>⏳ 持续可用</h3>
+      <p>域名解析与服务器状态经过长期观察，访问成功率较高，适合加入书签。</p>
+    </div>
+    <div class="card">
+      <h3>📄 信息集中</h3>
+      <p>首页聚合了主要导航与内容索引，不必在多个页面之间反复跳转。</p>
+    </div>
+    <div class="card">
+      <h3>🧭 路径直观</h3>
+      <p>无论从哪个设备打开，界面布局一致，操作逻辑不需要额外学习。</p>
+    </div>
+  </div>
+
+  <!-- 说明区：详述页面结构与使用场景 -->
+  <h2>页面说明与使用场景</h2>
+  <p>初次来到 <a href="https://i-gamezh.com.cn" class="inline-link">爱游戏</a> 的访客可能会注意：页面以内容分类为线索，顶部提供主要功能区块，中部为动态或推荐列表，底部放置常用链接与辅助信息。这种布局适合以下场景：</p>
+  <div class="quote-block">
+    <p><strong>场景一：</strong> 查询某款游戏的社区讨论帖，或查看近期活动公告——在首页导航区域可以快速定位对应板块。</p>
+    <p><strong>场景二：</strong> 寻找工具类页面（例如数据查询、配置模拟），页面内往往有专门的工具入口分类。</p>
+    <p><strong>场景三：</strong> 需要回看之前的浏览记录，平台提供历史或收藏功能，减少重复检索时间。</p>
+  </div>
+
+  <!-- 提示框 / 引用块风格的说明 -->
+  <div class="remark">
+    <p>💡 <strong>一点小提示：</strong> 如果页面加载后布局出现异常，可以尝试刷新或清理浏览器缓存。多数情况下，标准浏览器（Chrome、Edge、Firefox 等）均能获得完整的显示效果。移动端请确保横竖屏适配已开启。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <h2>常见问题 · 摘要</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q：是否需要注册才能浏览大部分内容？</div>
+    <div class="faq-a">A：通常情况下，首页及分类页面可直接浏览。部分互动功能（如评论、发帖）可能需要登录，具体以页面提示为准。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：页面中的链接指向外部站点吗？</div>
+    <div class="faq-a">A：多数链接仍然保持在 <a href="https://i-gamezh.com.cn" class="inline-link">爱游戏</a> 域名之下，少数友情链接或引用来源会跳转到其他站点，一般会有明确标识。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q：手机浏览时排版会变化吗？</div>
+    <div class="faq-a">A：站点启用了响应式设计，在手机和平板上会调整为更适合触控的卡片或列表布局，核心功能不变。</div>
+  </div>
+
+  <!-- 额外说明块，承接上文 -->
+  <hr>
+  <p style="font-size: 0.95rem; color:#5a4c3c;">如果你正在寻找一个结构稳定、内容经过分类的门户，<a href="https://i-gamezh.com.cn" class="inline-link">爱游戏</a> 可以作为日常参考的站点之一。页面内容会随时间更新，建议定期回看以获取最新信息。</p>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <span>← <a href="https://i-gamezh.com.cn">爱游戏</a></span>
+    <span>关于页面</span>
+    <span>使用帮助</span>
+    <span>隐私说明</span>
+  </div>
+  <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #877c70; text-align: right;">—— 页面基于使用经验整理 · 内容仅供参考</p>
+</div>
+</body>
+</html>
